@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}
+Dashboard
+{% endblock %}
+
+{% block content %}
+
+<div class="dashboard-card">
+
+    <h1>
+        Welcome, {{ user.username }} 👋
+    </h1>
+
+    <p>
+        Manage your job applications from here.
+    </p>
+
+    <br>
+
+    <a
+        class="btn"
+        href="{% url 'job_list' %}"
+    >
+        Browse Jobs
+    </a>
+
+    <a
+        class="btn"
+        href="{% url 'my_applications' %}"
+    >
+        My Applications
+    </a>
+
+</div>
+
+{% endblock %}

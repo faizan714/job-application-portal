@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+
+{% block title %}
+Job Application Portal
+{% endblock %}
+
+{% block content %}
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>
+            Find Your Next Opportunity
+        </h1>
+
+        <p>
+            Explore available jobs and submit your
+            application in a few simple steps.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a
+                class="btn"
+                href="{% url 'job_list' %}"
+            >
+                Browse Jobs
+            </a>
+
+            {% if not user.is_authenticated %}
+
+                <a
+                    class="btn btn-secondary"
+                    href="{% url 'signup' %}"
+                >
+                    Create Account
+                </a>
+
+            {% endif %}
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="home-section">
+
+    <h2>
+        Simple Application Process
+    </h2>
+
+    <div class="process-container">
+
+        <div class="process-card">
+
+            <h3>1. Create Account</h3>
+
+            <p>
+                Sign up for your account and
+                get started.
+            </p>
+
+        </div>
+
+
+        <div class="process-card">
+
+            <h3>2. Find a Job</h3>
+
+            <p>
+                Browse available jobs and
+                view their requirements.
+            </p>
+
+        </div>
+
+
+        <div class="process-card">
+
+            <h3>3. Apply</h3>
+
+            <p>
+                Complete the application form
+                and upload your resume.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

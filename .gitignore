@@ -5,3 +5,37 @@ __pycache__/
 db.sqlite3
 media/
 staticfiles/
+
+# Environment
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+venv/
+env/
+Fai/
+
+# Django
+db.sqlite3
+
+# Media
+media/
+
+# Static files
+staticfiles/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+.env
+fai/
+__pycache__/
+media/

@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block title %}
+My Applications
+{% endblock %}
+
+{% block content %}
+
+<h1>My Applications</h1>
+
+{% for application in applications %}
+
+    <div class="application-card">
+
+        <h2>
+            {{ application.job.title }}
+        </h2>
+
+        <p>
+            📍 {{ application.job.location }}
+        </p>
+
+        <p>
+            Applied:
+            {{ application.created_at }}
+        </p>
+
+        <p>
+            Status:
+            <span class="status">
+                {{ application.status }}
+            </span>
+        </p>
+
+    </div>
+
+{% empty %}
+
+    <div class="application-card">
+
+        <h2>No Applications Yet</h2>
+
+        <p>
+            You haven't applied for any jobs yet.
+        </p>
+
+        <a
+            class="btn"
+            href="{% url 'job_list' %}"
+        >
+            Browse Jobs
+        </a>
+
+    </div>
+
+{% endfor %}
+
+{% endblock %}
+
+
